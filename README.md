@@ -14,24 +14,21 @@ Last, I wish my incompleted project are still accepted. Thank you for your consi
 ## Preparation
 - Make sure your local has installed **Node**.
 - Make sure your local has installed **XAMPP** for creating database.
+- Clone this repo
 - Start `apache` and `mysql` from **XAMPP**
 - Create empty database through PHPMyAdmin with name `insurance_plan`.
 
 ## Installing Backend Repo
-- Clone this repo
-- Change directory to backend directory using `cd backend`.
+- Open terminal from `backend` folder
 - Run `npm install` to download all package.
 - Run `npx sequelize db:migrate` to create all tables.
 - Run `npx sequelize db:seed:all` to create all data sample.
 - Run `npm start` to run API application.
 
 ## Installing Frontend Repo
-- Open another terminal from `insurance-plan` repo
-- Change directory to frontend directory using `cd frontend`.
+- Open new terminal from `frontend` folder
 - Run `npm install` to download all package.
 - Run `npm start` to run application.
 
 # Documentation
-
-## API Documentation
-- Open [API Documentation](https://documenter.getpostman.com/view/9860394/UyrEftvc#f9627e0f-45a8-4bdd-9342-07cdcdf155d5) here
+- [API Documentation](https://documenter.getpostman.com/view/9860394/UyrEftvc#f9627e0f-45a8-4bdd-9342-07cdcdf155d5) here
