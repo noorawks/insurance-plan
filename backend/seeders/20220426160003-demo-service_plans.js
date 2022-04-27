@@ -3,31 +3,30 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     const plans = await queryInterface.sequelize.query(
-      `SELECT id FROM plans;`
+      `SELECT id, total_service FROM plans;`
     );
 
     const services = await queryInterface.sequelize.query(
       `SELECT id FROM services;`
     );
 
-    let planRows = plans[0];
-    let serviceRows = services[0];
-
     const dataSeed = [];
 
+    plans[0].forEach(element => {
+      services[0].slice(0, element['total_service'] - 1).forEach(data => {
+        dataSeed.push({
+          plan_id: element['id'],
+          service_id: data['id'],
+          createdAt: new Date(),
+          updatedAt: new Date()
+        });
+      });
+    });
     
-
-    return await queryInterface.bulkInsert('service_plans', [
-      {title: 'Movie 1', description: '...', id: '1', plan_id: planRows[0].id}
-    ], {});
+    return await queryInterface.bulkInsert('service_plans', dataSeed, {});
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+    return queryInterface.bulkDelete('service_plans', null, {});
   }
 };

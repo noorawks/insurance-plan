@@ -23,7 +23,7 @@ exports.serviceList = async (req, res, next) => {
     }).catch((err) => {
       res.status(500).send({
         message:
-          err.message || "Failed to reload Plan"
+          err.message || "Failed to reload Service"
       });
     });
 };
