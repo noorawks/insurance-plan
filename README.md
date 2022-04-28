@@ -4,11 +4,6 @@
 - ReactJS
 - Sequelize MySQL
 
-## Notes
-I want to apologies for incompleted task, especially i did not create docker image for this project. The requirement is the main reason for incompleted task.
-I never use all of stack's requirement so i have to learn every stack's requirement from zero to develop all of this. Unfortunately I did not make it to learn everything for 7 days.
-Last, I wish my incompleted project are still accepted. Thank you for your consideration, looking forward for your feedback
-
 # How To Use
 
 ## Preparation
